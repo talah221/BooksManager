@@ -1,0 +1,43 @@
+body{
+    background-color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+body.rtl .btn-delete {
+    float: left;
+} 
+
+td{
+    border: 2px solid black;
+    padding: 5px;
+
+}
+
+
+table{
+    color: white;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0px 0px 143px 17px rgba(0,0,0,0.71);
+
+}
+.btn::placeholder{
+    color: white;
+}
+
+/* h1{
+    color: limegreen;
+} */
+.bookinfo{
+    display: none;
+}
+
+.rating{
+    width: 49%;
+}

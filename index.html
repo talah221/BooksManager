@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Books</title>
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body onload=onInit()>
+    <h1 data-trans="title">My Books Anaaref</h1>
+ 
+    <select id="language" class="btn btn-primary" onchange="onSetLang(this.value)">
+        <option class="default" value="en">English</option>
+        <option value="he">עברית</option>
+    </select>
+    <div><button data-trans="add-btn" class="btn btn-primary mb-3 mt-2" onclick="openCreateBook()">Add book</button></div>
+    <input data-trans="book-name" type="text" name="" id="book-name-input" class="mb-3" placeholder="Book Name" style="display:none"> 
+    <input data-trans="book-price" type="number" name="" id="book-price-input" class="mb-3" placeholder="Book Price" style="display:none">
+    <button onclick="onCreateBook()" class="btn btn-warning" data-trans="submit-btn" style="display:none" id="book-submit" >submit</button>
+    
+
+    <table>
+        <thead>
+            <tr>
+                <td data-trans="id">Id </td>
+                <td onclick="onSortName()" data-trans="book-name">Book Name </td>
+                <td onclick="onSortPrice()" data-trans="book-price">Price </td>
+                <td data-trans="actions">Actions </td>
+                <td data-trans="book-rate">Book Rate:</td>
+            </tr>
+        </thead>
+        <tbody class="my-books">
+        </tbody>
+    </table>
+    <div class="bookinfo">
+        <h1 class="book-name">Book Name</h1>
+        <h4 class="book-price">Book Price</h4>
+        <h6 class="book-img">Book Img</h6>
+        <h5 class="book-rating">Book rating</h6>
+            <div class="ratings"></div>
+    </div>
+
+    <button data-trans="next-btn" class="btn btn-warning mt-3" onclick="onNextPage()">Next Page</button>
+
+
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/bootstrap/bootstrap.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+
+</html>
